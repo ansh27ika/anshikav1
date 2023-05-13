@@ -12,14 +12,14 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-    - name: Set up Python 3.10
+    - name: Set up Python 3.10.8
       uses: actions/setup-python@v3
       with:
-          python-version: 3.10
+          python-version: 3.10.8
     - name: Run Python commands
       run: |
         pip install --upgrade pip
-        python3.10 -m virtualenv env
+        python3.10.8 -m virtualenv env
         source env/bin/activate
         echo "VIRTUAL ENV:" $VIRTUAL_ENV
         pip install -r requirements.txt
