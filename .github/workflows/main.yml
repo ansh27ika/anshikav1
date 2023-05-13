@@ -24,7 +24,6 @@ jobs:
         source env/bin/activate
         echo "VIRTUAL ENV:" $VIRTUAL_ENV
         pip install -r requirements.txt
-    - name: Run application 
-      run: |
         pm2 start app.py --name flask-app --interpreter=python3
+      
 
