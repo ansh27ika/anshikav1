@@ -27,4 +27,5 @@ jobs:
   
     - name: Run application 
       run: |
-        sudo pm2 start app.py --name flask-app --interpreter=python3
+        npm i pm2 -g 
+        pm2 start app.py --name flask-app --interpreter=python3
