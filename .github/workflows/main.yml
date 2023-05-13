@@ -18,7 +18,8 @@ jobs:
           python-version: 3
     - name: Run Python commands
       run: |
-        pip install --upgrade pip      
+        pip install --upgrade pip
+        pip install virtualenv
         python3 -m virtualenv env
         source env/bin/activate
         echo "VIRTUAL ENV:" $VIRTUAL_ENV
