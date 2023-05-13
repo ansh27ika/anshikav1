@@ -57,7 +57,7 @@ def getvalue():
     return render_template('result.html',  tables=[df.to_html(classes='data')], titles=df.columns.values)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(host='0.0.0.0')
 
 
 # deply ec2 > then use docker for ngnix and flask > 
