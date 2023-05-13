@@ -12,14 +12,16 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Set up Python Environment
+    - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
-        python-version: '3.10'
-    - name: Install Dependencies
+          python-version: 3.10
+    - name: Run Python commands
       run: |
-        sudo virtualenv env1 
-        source env1/bin/activate
+        pip install --upgrade pip
+        python3.10 -m virtualenv env
+        source env/bin/activate
+        echo "VIRTUAL ENV:" $VIRTUAL_ENV
         pip install -r requirements.txt
   
     - name: Run application 
