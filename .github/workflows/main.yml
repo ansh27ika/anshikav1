@@ -27,5 +27,4 @@ jobs:
   
     - name: Run application 
       run: |
-        python3 pip install gunicorn
         gunicorn --bind 0.0.0.0:5000 app:app
