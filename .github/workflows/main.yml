@@ -27,5 +27,5 @@ jobs:
   
     - name: Run application 
       run: |
-        npm i pm2 -g 
-        pm2 start app.py --name flask-app --interpreter=python3
+        pip install gunicorn
+        gunicorn --bind 0.0.0.0:5000 app:app
