@@ -2,7 +2,7 @@
 A flask web-app which can be used to get recommendations for a tv-show/movie, the app recommends a list of media according to the input.
 # Architectural Diagram 
 
-![](Screenshots/architectural flow.png)
+![Architectural flow](Screenshots/architectural flow.png)
 
 The Flask application is developed and tested on a local development environment.
 Github actions are executed to build and test the application and deploy ro production environment
