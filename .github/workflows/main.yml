@@ -15,8 +15,16 @@ jobs:
     - name: Set up Python 3
       uses: actions/setup-python@v3
       with:
-          python-version: 3
-    - name: Run Python commands
+        python-version: 3
+    - name: Build Docker image
+      run: docker build -t myimage .
+    - name: Run Docker container
+      run: docker run -p 5000:500 myimage
+    - name: Set up Python 3 (inside Docker container)
+      uses: actions/setup-python@v3
+      with:
+        python-version: 3
+    - name: Run Python commands (inside Docker container)
       run: |
         pip install --upgrade pip
         pip install virtualenv
@@ -25,6 +33,3 @@ jobs:
         echo "VIRTUAL ENV:" $VIRTUAL_ENV
         pip install -r requirements.txt
         pm2 restart 0
-        
-      
-
