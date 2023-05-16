@@ -2,8 +2,6 @@
 A flask web-app which can be used to get recommendations for a tv-show/movie, the app recommends a list of media according to the input.
 # Architectural Diagram 
 
-![Architectural flow](Screenshots/architectural flow.png)
-
 The Flask application is developed and tested on a local development environment.
 Github actions are executed to build and test the application and deploy ro production environment
 docker image is created for flask app and pushed to to ec2 that for developement (use : Docker is used to create a container image of the Flask application, which can be easily deployed on any system that supports Docker)
