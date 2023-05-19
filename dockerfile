@@ -24,4 +24,3 @@ EXPOSE 5000
 
 
 ##  flask app > git > deploy on local server>  docker > aws 
-
